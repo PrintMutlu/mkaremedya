@@ -70,3 +70,4 @@ buyer-file/
 ## 📄 Lisans
 
 Bu proje MKare Medya'ya aittir. Tüm hakları saklıdır.
+# mkaremedya
