@@ -9930,10 +9930,14 @@ span {
 }
 .gt-pricing-box-items.pricing-style-3 .gt-pricing-header {
   border-bottom: 1px solid rgba(5, 17, 26, 0.2);
+  text-align: center;
 }
 .gt-pricing-box-items.pricing-style-3 .gt-pricing-header .sub-texts {
   color: var(--gt-header3);
   text-transform: capitalize;
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 .gt-pricing-box-items.pricing-style-3 .gt-pricing-header h2 {
   color: var(--gt-header3);
