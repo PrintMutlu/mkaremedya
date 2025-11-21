@@ -599,5 +599,250 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+        
+        <!-- Dynamic Blog Content Script -->
+        <script>
+        (function() {
+            // Blog içerikleri veritabanı - 9 EN İYİ BLOG
+            const blogData = {
+                'seo-neden-onemli': {
+                    title: 'SEO Neden Önemli? Google\'da İlk Sayfaya Çıkmanın Yolları',
+                    date: '21 Kas 2025',
+                    category: 'SEO',
+                    image: 'assets/img/news/placeholder-2.jpg',
+                    content: `
+                        <p class="mb-3">
+                            Arama Motoru Optimizasyonu (SEO), dijital pazarlamanın belkemiğidir. Web sitenizin Google gibi arama motorlarında üst sıralarda yer alması, sadece daha fazla trafik anlamına gelmez; aynı zamanda marka güvenilirliği ve sürdürülebilir büyüme demektir. Peki, SEO neden bu kadar kritik?
+                        </p>
+                        <p class="mb-3">
+                            Kullanıcıların %75'i arama sonuçlarının ikinci sayfasına asla geçmez. Bu istatistik bile tek başına SEO'nun önemini kanıtlamaya yeter. Doğru anahtar kelime stratejisi, teknik optimizasyon ve kaliteli içerik üretimi ile sitenizi arama motorlarının ve kullanıcıların sevdiği bir yapıya kavuşturabilirsiniz.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            M² Medya olarak SEO çalışmalarımızda sadece trafiğe değil, dönüşüme odaklanıyoruz. "Doğru" ziyaretçiyi sitenize çekmek, satışlarınızı artırmanın en etkili yoludur. Rakip analizi, site hızı optimizasyonu ve backlink stratejileriyle markanızı dijital dünyada görünür kılıyoruz.
+                        </p>
+                    `,
+                    quote: 'SEO bir sprint değil, bir maratondur. Sabır, strateji ve sürekli iyileştirme gerektirir. Ancak sonuçları, reklam bütçesi harcamadan elde edilen kalıcı ve değerli trafiktir.',
+                    tags: ['SEO', 'Google', 'Organik Trafik']
+                },
+                'instagram-reels-stratejileri': {
+                    title: 'E-Ticaret SEO: Online Mağazanızı Google\'ın 1. Sayfasına Çıkarın',
+                    date: '19 Kas 2025',
+                    category: 'E-Ticaret SEO',
+                    image: 'assets/img/news/placeholder-2.jpg',
+                    content: `
+                        <p class="mb-3">
+                            E-ticaret sitelerinde SEO, sadece ürün sayfalarını optimize etmekten ibaret değil. Kategori hiyerarşisi, kullanıcı deneyimi, site hızı ve mobil uyumluluk gibi faktörler satışlarınızı doğrudan etkiler. Doğru stratejilerle organik trafiğinizi %300 artırabilirsiniz.
+                        </p>
+                        <p class="mb-3">
+                            Ürün açıklamalarınız benzersiz olmalı. Üreticiden kopyaladığınız standart metinler, hem duplicate content cezası riskini artırır hem de müşterilerinize değer katmaz. Her ürün için hedef anahtar kelimeleri doğal bir şekilde kullanarak, kullanıcı sorularını yanıtlayan özgün içerikler yazın.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            Teknik SEO kritik önem taşır: Site mimarisi, breadcrumb navigasyonu, yapısal veri işaretlemeleri (Schema), XML sitemaps ve canonical tag'ler doğru yapılandırılmalı. Core Web Vitals gibi performans metrikleri satışları doğrudan etkiler. M² Medya, e-ticaret sitenizi Google'ın sevdiği bir yapıya kavuşturur.
+                        </p>
+                    `,
+                    quote: 'E-ticarette SEO yatırımı, sürekli müşteri getiren bir satış elemanı gibidir. Bir kez optimize edin, yıllarca kazanın.',
+                    tags: ['E-Ticaret', 'SEO', 'Online Satış']
+                },
+                'yapay-zeka-pazarlama': {
+                    title: 'Yapay Zeka ile Pazarlama: ChatGPT ve AI Araçları ile Verimlilik',
+                    date: '18 Kas 2025',
+                    category: 'AI & Teknoloji',
+                    image: 'assets/img/news/placeholder-3.jpg',
+                    content: `
+                        <p class="mb-3">
+                            Yapay zeka araçları, dijital pazarlamacıların iş yükünü azaltırken yaratıcılık alanını genişletiyor. ChatGPT, Midjourney, Jasper AI ve diğer platformlarla içerik üretiminden veri analizine kadar her alanda zaman kazanabilir, daha etkili kampanyalar yürütebilirsiniz.
+                        </p>
+                        <p class="mb-3">
+                            AI destekli içerik üretimi, blog yazılarından sosyal medya gönderilerine, email kampanyalarından reklam metinlerine kadar geniş bir yelpazeyi kapsıyor. Ancak AI'ı bir "asistan" olarak kullanmak önemli; insan dokunuşu, marka sesi ve özgünlük her zaman vazgeçilmezdir.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            Veri analitiğinde AI, müşteri segmentasyonu, tahminleme modelleri ve otomatik raporlamada devrim yaratıyor. A/B test optimizasyonu, kişiselleştirilmiş ürün önerileri ve dinamik fiyatlandırma gibi ileri düzey stratejiler artık küçük işletmelerin bile erişimine açık. M² Medya, AI araçlarını iş süreçlerinize entegre ederek rekabet avantajı sağlar.
+                        </p>
+                    `,
+                    quote: 'AI, pazarlamacıların işini almaz; yeterince hızlı adapte olmayanların işini alır. Teknolojiyi kucaklayın, farkı yaratın.',
+                    tags: ['Yapay Zeka', 'ChatGPT', 'Otomasyon']
+                },
+                'google-ads-stratejileri': {
+                    title: 'Instagram Reels ile Viral Olmak: Keşfete Düşmenin 10 Altın Kuralı',
+                    date: '15 Kas 2025',
+                    category: 'Sosyal Medya',
+                    image: 'assets/img/news/post-3.jpg',
+                    content: `
+                        <p class="mb-3">
+                            Reels algoritması, organik erişimin en yüksek olduğu içerik formatı. İlk 3 saniye, trend sesler, hook'lar (dikkat çekici açılışlar) ve net CTA'lar (call-to-action) ile milyonlarca kişiye ulaşabilirsiniz. Küçük işletmelerin bile viral olmasını sağlayan kanıtlanmış taktikler var.
+                        </p>
+                        <p class="mb-3">
+                            İçerik stratejisi 3 sütuna dayanmalı: Eğitim (How-to, Tips), Eğlence (Trending formats, Memes) ve Hikaye (Brand story, Behind the scenes). Her Reel'de bir ana mesaj olmalı, 7-15 saniye ideal süre. Trend sesler kullanın ama markanıza uygun olanları seçin; zoraki trend takibi zarar verir.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            Tutarlılık ve zamanlama kritik: Günde 1-2 Reels, hafta içi 9:00-11:00 ve 19:00-21:00 arası en yüksek etkileşim saatleri. Caption'lar kısa ama etkili olmalı, hashtag sayısı 3-5 ile sınırlı tutulmalı (spam algısı). Analytics takibi ve sürekli optimizasyon şart. M² Medya, Reels stratejinizi planlayıp üretimini yönetir.
+                        </p>
+                    `,
+                    quote: 'Reels\'te viral olmak şans değil, strateji işidir. Doğru hook + Trend ses + Değerli içerik = Keşfet sayfası.',
+                    tags: ['Instagram', 'Reels', 'Viral Marketing']
+                },
+                'cro-donusum-orani-optimizasyonu': {
+                    title: 'CRO: Dönüşüm Oranını %200 Artırmanın Kanıtlanmış 15 Yöntemi',
+                    date: '14 Kas 2025',
+                    category: 'Conversion Optimization',
+                    image: 'assets/img/news/placeholder-1.jpg',
+                    content: `
+                        <p class="mb-3">
+                            Mevcut trafiğinizden daha fazla satış yapmanın yolu CRO'da (Conversion Rate Optimization) gizli. A/B testleri, heatmap analizleri, kullanıcı geri bildirimleri ve UX iyileştirmeleriyle reklam bütçesi artırmadan gelirlerinizi katlayabilirsiniz. Vaka çalışmaları, basit değişikliklerle %200+ artış sağlandığını gösteriyor.
+                        </p>
+                        <p class="mb-3">
+                            Kritik CRO taktikleri: 1) CTA buttonlarını kontrastlı renklerle öne çıkarın 2) Sayfa yüklenme hızını optimize edin (3 saniyeden yavaş = %53 bounce) 3) Trust signals ekleyin (referanslar, sertifikalar, güvenlik rozetleri) 4) Form alanlarını minimize edin 5) Exit-intent popup'lar kullanın. Her değişikliği test edin, varsayımlara güvenmeyin.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            Heatmap araçları (Hotjar, Crazy Egg), kullanıcıların nereye tıkladığını, nerede takıldığını gösterir. Session recordings izleyerek kullanıcı deneyimindeki engelleri tespit edin. Multivariate testing ile birden fazla değişkeni aynı anda test edin. M² Medya, CRO stratejinizi veri odaklı bir yaklaşımla optimize eder.
+                        </p>
+                    `,
+                    quote: 'CRO, pazarlama bütçesi olmayan girişimcinin en iyi dostu. Mevcut ziyaretçilerinizi müşteriye çevirin, büyüme otomatik gelir.',
+                    tags: ['CRO', 'Dönüşüm', 'A/B Testing']
+                },
+                'e-ticaret-seo': {
+                    title: 'E-Ticaret SEO: Online Mağazanızı Google\'ın 1. Sayfasına Çıkarın',
+                    date: '19 Kas 2025',
+                    category: 'E-Ticaret SEO',
+                    image: 'assets/img/news/placeholder-2.jpg',
+                    content: `
+                        <p class="mb-3">
+                            E-ticaret sitelerinde SEO, sadece ürün sayfalarını optimize etmekten ibaret değil. Kategori hiyerarşisi, kullanıcı deneyimi, site hızı ve mobil uyumluluk gibi faktörler satışlarınızı doğrudan etkiler. Doğru stratejilerle organik trafiğinizi %300 artırabilirsiniz.
+                        </p>
+                        <p class="mb-3">
+                            Ürün açıklamalarınız benzersiz olmalı. Üreticiden kopyaladığınız standart metinler, hem duplicate content cezası riskini artırır hem de müşterilerinize değer katmaz. Her ürün için hedef anahtar kelimeleri doğal bir şekilde kullanarak, kullanıcı sorularını yanıtlayan özgün içerikler yazın.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            Teknik SEO kritik önem taşır: Site mimarisi, breadcrumb navigasyonu, yapısal veri işaretlemeleri (Schema), XML sitemaps ve canonical tag'ler doğru yapılandırılmalı. Core Web Vitals gibi performans metrikleri satışları doğrudan etkiler. M² Medya, e-ticaret sitenizi Google'ın sevdiği bir yapıya kavuşturur.
+                        </p>
+                    `,
+                    quote: 'E-ticarette SEO yatırımı, sürekli müşteri getiren bir satış elemanı gibidir. Bir kez optimize edin, yıllarca kazanın.',
+                    tags: ['E-Ticaret', 'SEO', 'Online Satış']
+                },
+                'video-marketing-2025': {
+                    title: 'Video Marketing 2025: YouTube, TikTok ve Shorts ile Büyüme',
+                    date: '13 Kas 2025',
+                    category: 'Video Marketing',
+                    image: 'assets/img/news/placeholder-2.jpg',
+                    content: `
+                        <p class="mb-3">
+                            Video içerik tüketimi her yıl %100 artıyor ve 2025'te internet trafiğinin %82'si video olacak. Hikaye anlatımı, profesyonel prodüksiyon gerektirmeyen telefon çekimleri ve trending formatlarla hedef kitlenize ulaşın. Düşük bütçeyle yüksek etkileşim almanın yolları açık.
+                        </p>
+                        <p class="mb-3">
+                            Platform stratejileri farklıdır: YouTube'da uzun formatlı, derinlemesine içerikler (10-20 dakika) SEO açısından güçlü. TikTok ve Instagram Shorts'ta ise 15-60 saniye kısa, hızlı ve eğlenceli formatlar işe yarıyor. Her platform için farklı edit stilleri, başlıklar ve hashtag stratejileri gerekir.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            Video SEO ihmal edilmemeli: Başlık, açıklama ve etiketler optimize edilmeli. Thumbnail'lar profesyonel ve tıklama çekici olmalı. İlk 3 saniyede izleyiciyi yakalayın, subtitles (altyazı) ekleyin (sessiz izleyenler için). Consistency (tutarlılık) anahtar; düzenli yükleme algoritma tarafından ödüllendirilir. M² Medya, video stratejinizi planlayıp içerik üretimini yönetir.
+                        </p>
+                    `,
+                    quote: 'Video, hikayenizi anlatmanın en güçlü aracı. Telefon kameranız yeterli; başlamak için mükemmeliyeti beklemeyin.',
+                    tags: ['Video Marketing', 'YouTube', 'TikTok']
+                },
+                'sosyal-medya-stratejileri': {
+                    title: 'Sosyal Medya Pazarlama: 2025\'te Başarılı Olmanın 7 Kuralı',
+                    date: '19 Kas 2025',
+                    category: 'Sosyal Medya',
+                    image: 'assets/img/home-4/news/news-06.jpg',
+                    content: `
+                        <p class="mb-3">
+                            Sosyal medya pazarlama, modern işletmelerin büyüme stratejilerinin vazgeçilmez parçası. Instagram, TikTok, LinkedIn, Twitter ve Facebook'ta etkili bir varlık oluşturmak, marka bilinirliğinden satışlara kadar tüm iş hedeflerinizi destekler. 2025'te başarılı olmanın yedi altın kuralı var.
+                        </p>
+                        <p class="mb-3">
+                            1) Platform seçimi stratejik olmalı: B2B işletmeler için LinkedIn, genç kitle için TikTok, görsel ürünler için Instagram öncelikli. 2) İçerik tutarlılığı kritik: Haftalık yayın takvimi oluşturun. 3) Etkileşime öncelik verin: Yorumlara cevap verin, DM'lere dönün. 4) Video içeriğe yatırım yapın: Reels, Shorts ve TikTok formatları organik erişimi artırır.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            5) Influencer iş birlikleri düşünün: Micro-influencer'lar (10K-100K takipçi) daha yüksek engagement oranı sunar. 6) Analytics takibi yapın: Hangi içerikler işe yarıyor? Veri odaklı kararlar alın. 7) Community building'e odaklanın: Sadık bir topluluk, en güçlü pazarlama aracınızdır. M² Medya, sosyal medya stratejinizi A'dan Z'ye yönetir.
+                        </p>
+                    `,
+                    quote: 'Sosyal medyada başarı, takipçi sayısı değil, engaged (etkileşimli) bir topluluk oluşturmakla gelir.',
+                    tags: ['Sosyal Medya', 'Instagram', 'TikTok']
+                },
+                'icerik-pazarlama-rehberi': {
+                    title: 'İçerik Pazarlama Rehberi: Viral Gidecek İçerikler Nasıl Yazılır?',
+                    date: '20 Kas 2025',
+                    category: 'İçerik Pazarlama',
+                    image: 'assets/img/news/placeholder-1.jpg',
+                    content: `
+                        <p class="mb-3">
+                            İçerik pazarlama, modern dijital pazarlamanın kalbidir. Hedef kitlenizi çeken, değer sunan ve paylaşılmayı hak eden içerikler üretmek, organik trafik ve marka sadakati kazanmanın en etkili yoludur. Ancak viral içeriklerin sırrı nedir?
+                        </p>
+                        <p class="mb-3">
+                            Başarılı içerikler, kullanıcı sorularına gerçek çözümler sunar. Google'ın E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) prensiplerine uygun, özgün ve derinlemesine araştırılmış makaleler, hem SEO performansını artırır hem de okuyucu sadakati yaratır.
+                        </p>
+                        <p class="mt-4 mb-5">
+                            Video içerikler, infografikler, podcast'ler ve interaktif formatlar gibi çeşitli medya türleriyle içerik stratejinizi zenginleştirin. Hikaye anlatımı (storytelling) gücünü kullanarak duygusal bağ kurun. M² Medya, markanızın sesini bulmanıza ve hedef kitlenizle anlamlı diyaloglar kurmanıza yardımcı olur.
+                        </p>
+                    `,
+                    quote: 'En iyi içerik, satış yapmaya çalışmadan değer katan, okuyucunun hayatını kolaylaştıran ve paylaşmak istediği içeriktir.',
+                    tags: ['İçerik Pazarlama', 'Storytelling', 'Viral İçerik']
+                }
+            };
+
+            // URL'den blog ID'sini al
+            const urlParams = new URLSearchParams(window.location.search);
+            const blogId = urlParams.get('id');
+
+            // Eğer blog ID varsa ve veritabanında mevcutsa içeriği güncelle
+            if (blogId && blogData[blogId]) {
+                const blog = blogData[blogId];
+                
+                // Başlık güncelle
+                const titleElement = document.querySelector('.post-content h3');
+                if (titleElement) titleElement.textContent = blog.title;
+                
+                // Tarih güncelle
+                const dateElements = document.querySelectorAll('.post-list li');
+                if (dateElements[1]) {
+                    dateElements[1].innerHTML = '<i class="fa-solid fa-calendar-days"></i>' + blog.date;
+                }
+                
+                // Kategori güncelle
+                if (dateElements[2]) {
+                    dateElements[2].innerHTML = '<i class="fa-solid fa-tag"></i>' + blog.category;
+                }
+                
+                // Görsel güncelle
+                const imgElement = document.querySelector('.post-featured-thumb img');
+                if (imgElement) {
+                    imgElement.src = blog.image;
+                    imgElement.alt = blog.title;
+                }
+                
+                // İçerik güncelle
+                const contentElement = document.querySelector('.post-content');
+                if (contentElement) {
+                    const paragraphs = contentElement.querySelectorAll('p');
+                    if (paragraphs.length >= 3) {
+                        // Mevcut paragrafları güncelle
+                        contentElement.innerHTML = contentElement.innerHTML.replace(
+                            /<p class="mb-3">[\s\S]*?<\/p>\s*<p class="mb-3">[\s\S]*?<\/p>\s*<p class="mt-4 mb-5">[\s\S]*?<\/p>/,
+                            blog.content
+                        );
+                    }
+                }
+                
+                // Alıntı güncelle
+                const quoteElement = document.querySelector('.hilight-text p');
+                if (quoteElement) quoteElement.textContent = '"' + blog.quote + '"';
+                
+                // Etiketler güncelle
+                const tagContainer = document.querySelector('.tagcloud');
+                if (tagContainer && blog.tags) {
+                    const tagsHTML = '<span>Etiketler:</span>' + 
+                        blog.tags.map(tag => `<a href="#">${tag}</a>`).join('');
+                    tagContainer.innerHTML = tagsHTML;
+                }
+                
+                // Sayfa başlığını güncelle
+                document.title = 'M² Medya | ' + blog.title;
+                
+                // Meta description güncelle
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', blog.content.replace(/<[^>]*>/g, '').substring(0, 160));
+                }
+            }
+        })();
+        </script>
     </body>
 </html>
