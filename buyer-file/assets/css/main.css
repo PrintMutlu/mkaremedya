@@ -10019,6 +10019,9 @@ span {
 }
 .gt-pricing-box-items.style-2 .gt-pricing-header .sub-texts {
   color: var(--gt-header3);
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 .gt-pricing-box-items.style-2 .gt-pricing-header h2 {
   color: var(--gt-header3);
