@@ -679,7 +679,27 @@
         window.addEventListener('load', handlePreloader);
     }
 
-
+    /* ================================
+       Blog Category Filter Js Start
+    ================================ */
+    $('.news-widget-categories ul li a').on('click', function(e) {
+        e.preventDefault();
+        
+        // Get selected category
+        const category = $(this).data('category');
+        
+        // Update active state
+        $('.news-widget-categories ul li').removeClass('active');
+        $(this).parent('li').addClass('active');
+        
+        // Filter blog items
+        if (category === 'all') {
+            $('.news-standard-items').fadeIn(300);
+        } else {
+            $('.news-standard-items').hide();
+            $('.news-standard-items[data-category="' + category + '"]').fadeIn(300);
+        }
+    });
 
   
-  })(jQuery); // End jQuery
+  })(jQuery); // End jQuery

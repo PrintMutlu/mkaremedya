@@ -14015,3 +14015,13 @@ span {
 /* -------------------------------------------------------------------------- */
 /*                               END TABLE OF CONTENTS                        */
 /* -------------------------------------------------------------------------- */
+/* Blog Category Filter Active State */
+.service-category ul li a.active {
+    background-color: var(--gt-theme) !important;
+    color: var(--gt-white) !important;
+}
+
+.service-category ul li a {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
