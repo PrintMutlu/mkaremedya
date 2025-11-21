@@ -1,33 +1,48 @@
-# M² Medya Statik Web Sitesi için Copilot Talimatları
+# M² Medya Project Instructions
 
-Bu proje, bir dijital pazarlama ajansı olan M² Medya'nın statik HTML web sitesidir. Temel amaç, "Boostly" adlı orijinal şablonu M² Medya markası ve hizmetleri için tamamen özelleştirmektir.
+## Project Overview
+- **Type:** Static HTML Website (No backend, no build process).
+- **Brand:** M² Medya (Digital Marketing Agency).
+- **Language:** Turkish (tr).
+- **Root Directory:** `buyer-file/` (All edits happen here).
 
-## Mimarinin "Büyük Resmi"
+## Architecture & File Structure
+- **HTML:** Independent `.html` files in `buyer-file/`.
+  - **No Partials:** Header, Footer, and common sections are **duplicated** in every file.
+  - **Editing Rule:** When changing a common element (e.g., Menu), you MUST apply the change to **ALL** `.html` files manually.
+- **CSS:** `assets/css/main.css` (Main styles), `assets/scss/` (Source SASS, but we edit CSS directly or compile if setup).
+- **JS:** `assets/js/main.js` (Main logic, jQuery-based).
+- **Assets:** `assets/img/` (Images), `assets/fonts/` (Webfonts).
 
-- **Statik HTML Yapısı:** Bu bir sunucu tarafı dil (PHP, Node.js vb.) veya modern bir frontend framework (React, Vue) kullanmayan, tamamen statik bir projedir. Tüm sayfalar `buyer-file/` klasöründe bulunan bağımsız `.html` dosyalarıdır.
-- **Paylaşılan Bileşen Yok:** En kritik nokta budur. `<header>` (navigasyon menüsü) ve `<footer>` (alt bilgi) gibi ortak bileşenler için bir şablon sistemi **yoktur**. Bu bileşenlerin kodları her bir `.html` dosyası içinde (`about.html`, `service.html` vb.) kopyalanıp yapıştırılmıştır.
-- **Önemli Kural:** Navigasyon menüsü veya alt bilgi gibi genel bir alanda değişiklik yaparken, bu değişikliği `buyer-file/` içindeki **tüm** `.html` dosyalarına manuel olarak uygulamanız gerekir. Genellikle `index.html` dosyasını ana şablon olarak kullanır, değişikliği önce orada yapar ve sonra diğer dosyalara kopyalarız.
+## Critical Workflows
+- **Development:** Run a local server in `buyer-file/` (e.g., `python3 -m http.server` or VS Code Live Server).
+- **Deployment:** Static file hosting. No build command required.
+- **Design Preservation (CRITICAL):**
+  - **NEVER** break the visual layout or CSS classes.
+  - SEO changes should be invisible (meta tags) or text-only updates.
+  - Do not change the folder structure or delete existing assets.
+- **SEO Implementation (High Priority):**
+  - Refer to `SEO_PLAN.md` for the detailed strategy.
+  - Ensure `lang="tr"` on all pages.
+  - Maintain unique `<title>` and `<meta name="description">` for every page.
+  - Add Open Graph (`og:`) and Twitter Card tags to `<head>`.
+  - Use Canonical URLs (`<link rel="canonical">`).
+  - All images must have descriptive `alt` attributes (No `alt="img"`).
 
-## Geliştirici İş Akışları
+## Code Style & Conventions
+- **HTML:** Semantic HTML5. Use `<header>`, `<footer>`, `<main>`, `<section>`.
+- **CSS:** Bootstrap 5 based. Use utility classes where possible, custom classes in `main.css`.
+- **JS:** jQuery syntax is prevalent. Wrap code in `(function($) { ... })(jQuery);`.
+- **Content & Data:**
+  - **Address:** "Konyaaltı, Antalya, Türkiye".
+  - **Language:** Turkish only (for now).
+  - **Logo:** Use a placeholder or text if image is missing. Recommend SVG for future.
+  - All user-facing text must be **Turkish**.
+  - Translate any leftover English text from the template (e.g., "Read More" -> "Devamını Oku").
+  - Use "M² Medya" branding consistently.
 
-- **Yerel Sunucuda Çalıştırma:** Projeyi yerel olarak görüntülemenin en basit yolu, `buyer-file` dizini içindeyken bir HTTP sunucusu başlatmaktır.
-  ```bash
-  cd buyer-file
-  python3 -m http.server 8000
-  ```
-  Alternatif olarak, VS Code'daki "Live Server" uzantısı şiddetle tavsiye edilir.
-- **Build/Test Süreci Yok:** Bu statik bir site olduğu için herhangi bir derleme (build) veya test komutu yoktur. Değişiklikler doğrudan dosyalara yapılır ve tarayıcıda anında görülebilir.
-
-## Projeye Özgü Kurallar ve Desenler
-
-- **Tasarım Bütünlüğü:** En önemli kuraldır. Yapılan tüm metin ve yapısal değişiklikler, mevcut CSS sınıflarını ve HTML yapısını koruyarak sitenin görsel tasarımını **asla bozmamalıdır**. Yeni bir bileşen eklenmiyorsa, `assets/css/main.css` gibi ana stil dosyalarında değişiklik yapmaktan kaçının.
-- **Marka ve Dil:** Ana marka "M² Medya"dır. Tüm içerik ve metinler **Türkçe** olmalıdır. "Boostly", "Company", "Services" gibi İngilizce kalıntıları gördüğünüzde bunları Türkçeleştirin.
-- **Dosya Yapısı:**
-  - `buyer-file/`: Kullanıcıların gördüğü canlı web sitesi dosyalarının bulunduğu ana klasördür. Tüm düzenlemeler bu klasör içinde yapılmalıdır.
-  - `buyer-file/assets/`: CSS, JavaScript, resimler ve fontlar gibi tüm statik varlıkların bulunduğu yerdir.
-  - `documentation/`: Orijinal şablonun dokümantasyonudur, projenin kendisiyle doğrudan bir ilgisi yoktur.
-- **Hizmetler:** Ana hizmetler şunlardır: Web Tasarımı, SaaS Yazılımlar, Sosyal Medya Yönetimi, Reklam Yönetimi (Google & Meta Ads), SEO. İçerik bu hizmetler etrafında şekillendirilmelidir.
-- **Örnek Değişiklik Senaryosu:**
-  1. `buyer-file/index.html` dosyasındaki `<header>` bölümünde yeni bir menü öğesi ekleyin.
-  2. Güncellenmiş `<header>...</header>` kod bloğunu kopyalayın.
-  3. `buyer-file/about.html`, `buyer-file/service.html`, `buyer-file/contact.html` ve diğer tüm `.html` dosyalarını açın, mevcut `<header>` bloklarını silin ve yenisiyle değiştirin.
+## Key Files
+- `buyer-file/index.html`: Homepage (Master template for header/footer changes).
+- `buyer-file/assets/css/main.css`: Primary stylesheet.
+- `buyer-file/assets/js/main.js`: UI interactions (Mobile menu, Sliders).
+- `SEO_PLAN.md`: Comprehensive SEO checklist and strategy.
