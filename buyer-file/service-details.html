@@ -209,54 +209,20 @@
                                     </div>
                                     <div class="service-widget-categories">
                                         <ul>
-                                            <li><a href="service-details.html">Web Tasarım</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
-                                            <li><a href="service-details.html">İçerik Pazarlama</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
-                                            <li class="active"><a href="service-details.html">Sosyal Medya Pazarlama</a><span><i class="fa-regular fa-arrow-right-long"></i></span></li>
-                                            <li><a href="service-details.html">Ortaklık Pazarlama</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
-                                            <li><a href="service-details.html">Arama Motoru Pazarlama (SEM)</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                            <li class="active" data-service="web"><a href="javascript:void(0)">Web Sitesi Tasarımı</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                            <li data-service="saas"><a href="javascript:void(0)">SaaS Yazılım Çözümleri</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                            <li data-service="sosyal"><a href="javascript:void(0)">Sosyal Medya Yönetimi</a><span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                            <li data-service="ads"><a href="javascript:void(0)">Google & Meta Reklamları</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                            <li data-service="danismanlik"><a href="javascript:void(0)">Dijital Pazarlama Danışmanlığı</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                            <li data-service="seo"><a href="javascript:void(0)">SEO ve İçerik Pazarlama</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-8">
-                            <div class="service-details-content">
-                                <h3>
-                                    M² Medya ile Dijital Dönüşüm
-                                </h3>
-                                <p class="mb-4">
-                                    M² Medya olarak, işletmenizin dijital dünyada güçlü bir varlık kurmasına yardımcı oluyoruz. Modern web tasarım çözümlerinden SaaS yazılım geliştirmeye, sosyal medya yönetiminden reklam stratejilerine kadar kapsamlı hizmetler sunuyoruz. İş süreçlerinizi dijitalleştirip verimliliğinizi artırarak rakiplerinizin önüne geçmenizi sağlıyoruz.
-                                </p>
-                                <p class="mb-4">
-                                    Teknolojinin hızla geliştiği günümüzde, işletmenizin dijital dönüşümü yalnızca bir seçenek değil, zorunluluktur. M² Medya'nın uzman ekibi ile web tasarım, SaaS yazılım çözümleri, sosyal medya yönetimi ve hedefli reklam kampanyalarında en kaliteli hizmeti alabilirsiniz. Müşterilerinizle güçlü bağlar kurmanızı ve işletmenizi büyütmenizi sağlıyoruz.
-                                </p>
-                                <h3>
-                                    Sunduğumuz Hizmetler
-                                </h3>
-                                <p class="mb-5">
-                                    M² Medya olarak, işletmenizin her aşamasında ihtiyaç duyacağınız dijital çözümleri sunuyoruz. Web tasarım ve geliştirmeden başlayarak, özel SaaS yazılım çözümleri, sosyal medya hesap yönetimi, Google Ads ve Meta reklamları ile markanızı hedef kitlenize ulaştırıyoruz. SEO ve içerik pazarlama hizmetlerimizle de organik trafiğinizi artırıp uzun vadeli başarınızı destekliyoruz.
-                                </p>
-                                <div class="thumb">
-                                    <img src="assets/img/inner/service/service-details-2.jpg" alt="img">
-                                </div>
-                                <h3>
-                                    Neden M² Medya?
-                                </h3>
-                                <p>
-                                    Dijital pazarlama dünyasında rekabet her geçen gün artıyor. İşletmenizin öne çıkması için yaratıcı çözümler, uzman bilgi ve sürekli optimizasyon gerekiyor. M² Medya olarak, bu zorluklara karşı kapsamlı ve etkili çözümler sunuyoruz. Deneyimli ekibimiz ve güncel teknolojilerle markanızı dijital dünyada lider konuma getiriyoruz.
-                                </p>
-                                <div class="details-list-items">
-                                    <ul class="details-list">
-                                        <li><i class="fa-solid fa-circle-check"></i>Modern Web Tasarım</li>
-                                        <li><i class="fa-solid fa-circle-check"></i>SaaS Yazılım Geliştirme</li>
-                                        <li><i class="fa-solid fa-circle-check"></i>Sosyal Medya Yönetimi</li>
-                                    </ul>
-                                    <ul class="details-list">
-                                        <li><i class="fa-solid fa-circle-check"></i>Google & Meta Reklamları</li>
-                                        <li><i class="fa-solid fa-circle-check"></i>SEO & İçerik Pazarlama</li>
-                                        <li><i class="fa-solid fa-circle-check"></i>Dijital Danışmanlık</li>
-                                    </ul>
-                                </div>
+                            <div class="service-details-content" id="serviceContent">
+                                <!-- İçerik JavaScript ile yüklenecek -->
                             </div>
                             <div class="gt-faq-wrapper mt-5">
                             <div class="accordion style-inner" id="accordionExample2">
@@ -291,13 +257,13 @@
                                 </div>                                <div class="accordion-item wow fadeInUp" data-wow-delay=".7s">
                                     <h2 class="accordion-header" id="headingTwo3">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
-                                            Üretlendirme nasıl yapılıyor?
+                                            Ücretlendirme nasıl yapılıyor?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo3" class="accordion-collapse collapse" aria-labelledby="headingTwo3" data-bs-parent="#accordionExample2">
                                         <div class="accordion-body">
                                              <p>
-                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+                                                Ücretlendirme modelimiz proje bazlı ve şeffaf bir yapıya sahiptir. Her projenin kapsamı, süresi ve ihtiyaçlarına göre özel teklifler hazırlıyoruz. Sosyal medya yönetimi ve reklam hizmetlerinde aylık paketler sunuyoruz. Web tasarım ve SaaS projelerinde ise proje bazlı fiyatlandırma yapıyoruz. Detaylı bilgi almak için bizimle iletişime geçebilirsiniz.
                                             </p>
                                         </div>
                                     </div>
@@ -312,7 +278,7 @@
                                     <div id="collapsethree4" class="accordion-collapse collapse" aria-labelledby="headingthree4" data-bs-parent="#accordionExample2">
                                         <div class="accordion-body">
                                              <p>
-                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+                                                Modern web teknolojilerinde uzmanlığımız bulunmaktadır. React, Vue.js, Next.js gibi frontend framework'leri, Node.js ve Python backend teknolojileri kullanıyoruz. Bulut altyapıları için AWS, Google Cloud ve Azure ile çalışıyoruz. SEO ve analitik için Google Analytics, Search Console ve çeşitli SEO araçları kullanıyoruz. Her projede en uygun teknoloji stack'i öneriyoruz.
                                             </p>
                                         </div>
                                     </div>
@@ -327,7 +293,7 @@
                                     <div id="collapsethree1" class="accordion-collapse collapse" aria-labelledby="headingthree1" data-bs-parent="#accordionExample2">
                                         <div class="accordion-body">
                                              <p>
-                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+                                                Proje tamamlanma süresi, projenin kapsamına ve karmaşıklığına göre değişiklik gösterir. Basit bir kurumsal web sitesi 2-4 hafta, e-ticaret siteleri 4-8 hafta, SaaS yazılım projeleri ise 3-6 ay sürebilir. Sosyal medya yönetimi ve reklam kampanyaları sürekli devam eden hizmetlerdir. İlk görüşmede size net bir zaman çizelgesi sunuyoruz ve projenin her aşamasında bilgilendiriyoruz.
                                             </p>
                                         </div>
                                     </div>
@@ -526,5 +492,102 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+        
+        <!-- Service Details Dynamic Content Script -->
+        <script>
+        $(document).ready(function() {
+            const serviceContents = {
+                web: {
+                    title: 'Web Sitesi Tasarımı',
+                    desc1: 'Modern, hızlı ve mobil uyumlu kurumsal web siteleri tasarlıyoruz. Responsive tasarım ile tüm cihazlarda mükemmel görünüm sağlıyoruz.',
+                    desc2: 'SEO uyumlu, hızlı yüklenen ve dönüşüm odaklı web siteleri ile dijital varlığınızı güçlendiriyoruz. E-ticaret, kurumsal web ve blog sitelerinde uzmanız.',
+                    subtitle: 'Web Tasarım Sürecimiz',
+                    desc3: 'İhtiyaç analizi, wireframe tasarım, görsel dizayn, kodlama ve test süreçlerini titizlikle yürütüyoruz. Her projede müşteri memnuniyeti önceliğimizdir.',
+                    features: ['Responsive Tasarım', 'SEO Optimizasyonu', 'Hızlı Yükleme', 'Modern Arayüz', 'Güvenli Altyapı', 'Mobil Uyumlu']
+                },
+                saas: {
+                    title: 'SaaS Yazılım Çözümleri',
+                    desc1: 'İş süreçlerinizi otomatize eden ve verimliliği artıran özel bulut tabanlı yazılım çözümleri geliştiriyoruz.',
+                    desc2: 'Ölçeklenebilir, güvenli ve kullanıcı dostu SaaS uygulamaları ile işletmenizin dijital dönüşümünü hızlandırıyoruz.',
+                    subtitle: 'SaaS Geliştirme Sürecimiz',
+                    desc3: 'İhtiyaç analizi, prototip oluşturma, yazılım geliştirme ve bulut entegrasyonu süreçlerinde uzman ekibimizle yanınızdayız.',
+                    features: ['Bulut Tabanlı Mimari', 'API Entegrasyonları', 'Otomatik Yedekleme', 'Güvenlik Önlemleri', '7/24 Destek', 'Ölçeklenebilir Altyapı']
+                },
+                sosyal: {
+                    title: 'Sosyal Medya Yönetimi',
+                    desc1: 'Instagram, Facebook ve diğer platformlarda marka bilinirliğinizi artırmak için stratejik içerik üretimi yapıyoruz.',
+                    desc2: 'Engagement artırıcı stratejiler, hashtag optimizasyonu ve düzenli analiz raporlarıyla sosyal medya varlığınızı güçlendiriyoruz.',
+                    subtitle: 'Sosyal Medya Stratejimiz',
+                    desc3: 'Hedef kitlenize ulaşmak için platform bazlı stratejiler geliştiriyoruz. Görsel tasarım, video prodüksiyon ve influencer işbirlikleri organize ediyoruz.',
+                    features: ['İçerik Üretimi', 'Gönderi Planlama', 'Community Management', 'Hashtag Stratejisi', 'Analytics Raporlama', 'Influencer İşbirlikleri']
+                },
+                ads: {
+                    title: 'Google & Meta Reklamları',
+                    desc1: 'Google Ads ve Meta (Facebook, Instagram) platformlarında hedef odaklı reklam kampanyaları yönetiyoruz.',
+                    desc2: 'Bütçenizi verimli kullanarak, hedef kitlenize ulaşıyoruz. Conversion tracking ve A/B testleriyle sürekli iyileştirme sağlıyoruz.',
+                    subtitle: 'Reklam Yönetim Sürecimiz',
+                    desc3: 'Anahtar kelime araştırması, reklam metni yazımı, görsel tasarım ve teklif optimizasyonu ile ROI odaklı kampanyalar yürütüyoruz.',
+                    features: ['Google Ads Yönetimi', 'Meta Ads Yönetimi', 'Anahtar Kelime Araştırması', 'Reklam Metni Yazımı', 'Conversion Tracking', 'Remarketing']
+                },
+                danismanlik: {
+                    title: 'Dijital Pazarlama Danışmanlığı',
+                    desc1: 'İşletmenizin dijital dönüşüm sürecinde stratejik rehberlik ve uzman danışmanlık hizmetleri sunuyoruz.',
+                    desc2: 'Dijital pazarlama stratejinizi oluşturmanız, optimize etmeniz ve ölçümlemeniz için kapsamlı danışmanlık veriyoruz.',
+                    subtitle: 'Danışmanlık Sürecimiz',
+                    desc3: 'Sektör analizi, rakip analizi, hedef kitle belirleme ve strateji geliştirme konularında uzman ekibimizle yanınızdayız.',
+                    features: ['Dijital Strateji Geliştirme', 'Rakip Analizi', 'Hedef Kitle Analizi', 'Kanal Optimizasyonu', 'Performans Ölçümleme', 'Eğitim & Mentorluk']
+                },
+                seo: {
+                    title: 'SEO ve İçerik Pazarlama',
+                    desc1: 'Arama motoru optimizasyonu ve kaliteli içerik üretimi ile organik trafiğinizi artırıyoruz.',
+                    desc2: 'Anahtar kelime araştırması, teknik SEO, link building ve içerik pazarlama stratejileriyle Google sıralamalarınızı yükseltiyoruz.',
+                    subtitle: 'SEO Sürecimiz',
+                    desc3: 'Site analizi, anahtar kelime araştırması, on-page ve off-page SEO çalışmaları ile uzun vadeli organik başarı sağlıyoruz.',
+                    features: ['Teknik SEO', 'Anahtar Kelime Araştırması', 'İçerik Optimizasyonu', 'Link Building', 'Yerel SEO', 'SEO Raporlama']
+                }
+            };
+            
+            function loadService(service) {
+                const content = serviceContents[service];
+                if (!content) return;
+                
+                const html = `
+                    <h3>${content.title}</h3>
+                    <p class="mb-4">${content.desc1}</p>
+                    <p class="mb-4">${content.desc2}</p>
+                    <h3>${content.subtitle}</h3>
+                    <p class="mb-5">${content.desc3}</p>
+                    <div class="thumb">
+                        <img src="assets/img/inner/service/service-details-2.jpg" alt="img">
+                    </div>
+                    <h3>Neden M² Medya?</h3>
+                    <p>Dijital pazarlama dünyasında rekabet her geçen gün artıyor. İşletmenizin öne çıkması için yaratıcı çözümler, uzman bilgi ve sürekli optimizasyon gerekiyor. M² Medya olarak, bu zorluklara karşı kapsamlı ve etkili çözümler sunuyoruz.</p>
+                    <div class="details-list-items">
+                        <ul class="details-list">
+                            ${content.features.slice(0, 3).map(f => `<li><i class="fa-solid fa-circle-check"></i>${f}</li>`).join('')}
+                        </ul>
+                        <ul class="details-list">
+                            ${content.features.slice(3, 6).map(f => `<li><i class="fa-solid fa-circle-check"></i>${f}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                
+                $('#serviceContent').html(html);
+                
+                // Active class değiştir
+                $('.service-widget-categories li').removeClass('active');
+                $(`.service-widget-categories li[data-service="${service}"]`).addClass('active');
+            }
+            
+            // Sayfa yüklendiğinde ilk servisi göster
+            loadService('web');
+            
+            // Menü tıklamalarını dinle
+            $('.service-widget-categories li').click(function() {
+                const service = $(this).data('service');
+                loadService(service);
+            });
+        });
+        </script>
     </body>
 </html>
