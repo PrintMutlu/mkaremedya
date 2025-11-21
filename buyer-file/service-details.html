@@ -579,13 +579,24 @@
                 $(`.service-widget-categories li[data-service="${service}"]`).addClass('active');
             }
             
-            // Sayfa yüklendiğinde ilk servisi göster
-            loadService('web');
+            // URL parametresinden hizmet ID'sini al
+            function getServiceFromURL() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('service') || 'web'; // Varsayılan: web
+            }
+            
+            // Sayfa yüklendiğinde URL'den gelen hizmeti göster
+            const initialService = getServiceFromURL();
+            loadService(initialService);
             
             // Menü tıklamalarını dinle
             $('.service-widget-categories li').click(function() {
                 const service = $(this).data('service');
                 loadService(service);
+                
+                // URL'i güncelle (sayfa yeniden yüklenmeden)
+                const newUrl = `${window.location.pathname}?service=${service}`;
+                window.history.pushState({service: service}, '', newUrl);
             });
         });
         </script>
