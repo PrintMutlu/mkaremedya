@@ -5535,7 +5535,7 @@ span {
   background-position: center;
 }
 .gt-brand-wrapper .gt-brand-image img {
-  filter: grayscale(100%) sepia(20%) brightness(90%) hue-rotate(190deg) saturate(200%);
+  filter: grayscale(100%);
   transition: filter 0.5s ease;
   max-width: 80px;
   max-height: 60px;
@@ -5547,10 +5547,11 @@ span {
   filter: none;
 }
 .gt-brand-wrapper .gt-brand-image.hover-2 img {
+  filter: grayscale(100%);
   transition: all 0.5s ease;
 }
 .gt-brand-wrapper .gt-brand-image.hover-2:hover img {
-  filter: brightness(0) saturate(100%) invert(10%) sepia(15%) saturate(749%) hue-rotate(170deg) brightness(90%) contrast(95%);
+  filter: none;
 }
 
 .gt-feature-list-wrapper {
