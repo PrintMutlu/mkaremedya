@@ -66,4 +66,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Blog Posts -->
+  <url><loc>https://mkaremedya.com/news-details.html?id=seo-neden-onemli</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=instagram-reels-stratejileri</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=yapay-zeka-pazarlama</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=google-ads-stratejileri</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=sosyal-medya-stratejileri</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=e-ticaret-seo</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=video-marketing-2025</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=cro-donusum-orani-optimizasyonu</loc><priority>0.7</priority></url>
+  <url><loc>https://mkaremedya.com/news-details.html?id=icerik-pazarlama-rehberi</loc><priority>0.7</priority></url>
+  <!-- Services -->
+  <url><loc>https://mkaremedya.com/service-details.html?service=web</loc><priority>0.8</priority></url>
+  <url><loc>https://mkaremedya.com/service-details.html?service=saas</loc><priority>0.8</priority></url>
+  <url><loc>https://mkaremedya.com/service-details.html?service=sosyal</loc><priority>0.8</priority></url>
+  <url><loc>https://mkaremedya.com/service-details.html?service=ads</loc><priority>0.8</priority></url>
+  <url><loc>https://mkaremedya.com/service-details.html?service=danismanlik</loc><priority>0.8</priority></url>
+  <url><loc>https://mkaremedya.com/service-details.html?service=seo</loc><priority>0.8</priority></url>
 </urlset>

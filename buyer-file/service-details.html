@@ -654,6 +654,27 @@
                 const content = serviceContents[service];
                 if (!content) return;
                 
+                // Sayfa başlığını güncelle
+                document.title = content.title + ' | M² Medya';
+                
+                // Meta description güncelle
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', content.desc1 + ' ' + content.desc2);
+                }
+
+                // Canonical URL güncelle
+                const canonical = document.querySelector('link[rel="canonical"]');
+                if (canonical) {
+                    canonical.href = 'https://mkaremedya.com/service-details.html?service=' + service;
+                }
+
+                // Breadcrumb H1 güncelle
+                const breadcrumbH1 = document.querySelector('.gt-breadcrumb-sub-title h1');
+                if (breadcrumbH1) {
+                    breadcrumbH1.textContent = content.title;
+                }
+
                 const html = `
                     <h3>${content.title}</h3>
                     <p class="mb-4">${content.desc1}</p>

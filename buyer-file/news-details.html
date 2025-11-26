@@ -703,6 +703,18 @@
                 
                 // Sayfa başlığını güncelle
                 document.title = 'M² Medya | ' + blog.title;
+
+                // Breadcrumb H1 güncelle
+                const breadcrumbH1 = document.querySelector('.gt-breadcrumb-sub-title h1');
+                if (breadcrumbH1) {
+                    breadcrumbH1.textContent = blog.title;
+                }
+
+                // Canonical URL güncelle
+                const canonical = document.querySelector('link[rel="canonical"]');
+                if (canonical) {
+                    canonical.href = 'https://mkaremedya.com/news-details.html?id=' + blogId;
+                }
                 
                 // Meta description güncelle
                 const metaDesc = document.querySelector('meta[name="description"]');
