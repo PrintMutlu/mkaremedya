@@ -667,7 +667,7 @@ span {
   background-repeat: no-repeat;
   -webkit-animation: pulse 1s infinite linear;
   animation: pulse 1s infinite linear;
-  background-image: url(../../assets/img/prealoader.png);
+  background-image: url(../../assets/logo/prealoader.png);
   content: "";
 }
 
@@ -686,7 +686,7 @@ span {
   font-family: "TestTiemposFine-Regular-BF66457a50e8bc9", serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  content: "Loadıng";
+  content: "Yükleniyor...";
   -webkit-transition: none;
   transition: none;
   left: 30px;
