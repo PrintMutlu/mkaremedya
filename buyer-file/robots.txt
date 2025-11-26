@@ -3,5 +3,5 @@ Allow: /
 Disallow: /assets/scss/
 Disallow: /documentation/
 
-Sitemap: https://m2medya.com/sitemap.xml
-Host: https://m2medya.com
+Sitemap: https://mkaremedya.com/sitemap.xml
+Host: https://mkaremedya.com

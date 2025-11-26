@@ -19,7 +19,7 @@ Her `.html` dosyasının `<head>` bölümüne eklenecek standart yapı:
 <meta name="keywords" content="[Sayfaya Özel Anahtar Kelimeler]">
 <meta name="author" content="M² Medya">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://m2medya.com/[sayfa-adi].html">
+<link rel="canonical" href="https://mkaremedya.com/[sayfa-adi].html">
 ```
 
 ### B. Sosyal Medya Entegrasyonu (Open Graph & Twitter Cards)
@@ -27,17 +27,17 @@ Link paylaşıldığında (WhatsApp, LinkedIn, Instagram DM) profesyonel bir ön
 ```html
 <!-- Open Graph / Facebook & WhatsApp -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://m2medya.com/[sayfa-adi].html">
+<meta property="og:url" content="https://mkaremedya.com/[sayfa-adi].html">
 <meta property="og:title" content="[Sayfa Başlığı] | M² Medya">
 <meta property="og:description" content="[Sayfa Açıklaması]">
-<meta property="og:image" content="https://m2medya.com/assets/img/og-image.jpg"> <!-- 1200x630px özel görsel -->
+<meta property="og:image" content="https://mkaremedya.com/assets/img/og-image.jpg"> <!-- 1200x630px özel görsel -->
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://m2medya.com/[sayfa-adi].html">
+<meta name="twitter:url" content="https://mkaremedya.com/[sayfa-adi].html">
 <meta name="twitter:title" content="[Sayfa Başlığı] | M² Medya">
 <meta name="twitter:description" content="[Sayfa Açıklaması]">
-<meta name="twitter:image" content="https://m2medya.com/assets/img/og-image.jpg">
+<meta name="twitter:image" content="https://mkaremedya.com/assets/img/og-image.jpg">
 ```
 
 ### C. Yapısal Veri (Schema.org JSON-LD)
@@ -48,9 +48,9 @@ Google'ın işletmeyi "Dijital Ajans" olarak tanıması için `index.html` ve `c
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "M² Medya",
-  "image": "https://m2medya.com/assets/img/logo/logo.png",
+  "image": "https://mkaremedya.com/assets/img/logo/logo.png",
   "@id": "",
-  "url": "https://m2medya.com",
+  "url": "https://mkaremedya.com",
   "telephone": "+905555555555",
   "address": {
     "@type": "PostalAddress",

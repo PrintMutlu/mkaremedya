@@ -16,7 +16,7 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "info@m2medya.com";
+        $recipient = "info@mkaremedya.com";
 
         // Build the email content.
         $email_content = "Name $name\n";
